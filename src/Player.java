@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
- 
+
 /**
  * Grab Snaffles and try to throw them through the opponent's goal!
  * Move towards a Snaffle and use your team id to determine where you need to throw it.
@@ -393,13 +393,13 @@ class Player {
         }
         Coord sideShotTarget = getSideShotTarget(params, wizard);
         //if (!throwGetsIntercepted(wizard, params, sideShotTarget, 2500, 500)) {
-            System.err.println("Went with left / right align");
-            Coord compensatedCoord = getCompensatedCoord(wizard, 500, sideShotTarget);
-            ThrowParams sideShotParams = new ThrowParams();
-            sideShotParams.setX(compensatedCoord.getX());
-            sideShotParams.setY(compensatedCoord.getY());
-            sideShotParams.setPower(500);
-            return sideShotParams;
+        System.err.println("Went with left / right align");
+        Coord compensatedCoord = getCompensatedCoord(wizard, 500, sideShotTarget);
+        ThrowParams sideShotParams = new ThrowParams();
+        sideShotParams.setX(compensatedCoord.getX());
+        sideShotParams.setY(compensatedCoord.getY());
+        sideShotParams.setPower(500);
+        return sideShotParams;
         //}
 
         /*ThrowParams passBehindParams = getPassBehindParams(wizard);
